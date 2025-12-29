@@ -3,6 +3,8 @@
 html, body {
     font-family: "Montserrat", "Work Sans", Arial, sans-serif;
     scroll-behavior: smooth; /* плавный скролл при переходе по якорям */
+    overflow-x: hidden;
+    width: 100%;
 }
 
 :root {
