@@ -24,6 +24,91 @@ html, body {
     margin-bottom: 6rem;
 }
 
+/*** Matches Gallery ***/
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #ffffff;
+}
+
+.gallery-item .gallery-thumb {
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item figcaption {
+    margin-top: auto;
+}
+
+/*** Social & Video cards ***/
+.social-card,
+.video-card {
+    background: #ffffff;
+    border-radius: .375rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    overflow: hidden;
+}
+
+.social-card .instagram-media-wrapper {
+    display: flex;
+    justify-content: center;
+    background: var(--light);
+    min-height: 400px;
+}
+
+.social-card .instagram-media-wrapper iframe,
+.social-card .instagram-media-wrapper blockquote {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.video-card .ratio iframe {
+    border: 0;
+}
+
+.video-card .video-preview {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.video-card .video-thumb {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .3s ease;
+}
+
+.video-card .video-preview:hover .video-thumb {
+    transform: scale(1.05);
+}
+
+.video-card .video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(12, 43, 75, .7);
+    color: #ffffff;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.video-card .video-preview:hover .video-play-btn {
+    background: var(--primary);
+    color: var(--dark);
+}
+
 .back-to-top {
     position: fixed;
     display: none;
